@@ -1,0 +1,104 @@
+/* Arabic language specific styles */
+.arabic-text {
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.8;
+}
+
+.arabic-heading {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* Arabic numbers */
+.arabic-numbers {
+  font-family: 'Cairo', sans-serif;
+  font-feature-settings: "numr";
+}
+
+/* Job card hover effects */
+.job-card-hover {
+  transition: all 0.3s ease;
+}
+
+.job-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar focus styles */
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Category filter active state */
+.category-active {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.category-active:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+/* Responsive adjustments for Arabic */
+@media (max-width: 768px) {
+  [dir="rtl"] .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .arabic-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation for job listings */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-item {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Loading skeleton for Arabic content */
+.arabic-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
